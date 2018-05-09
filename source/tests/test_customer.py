@@ -45,7 +45,3 @@ class TestCustomer:
         customer = Customer('Joe Doe', 10.0)
         with pytest.raises(RuntimeError) as e:
             customer.withdraw(20.0)
-
-    def test_that_should_fail(self):
-        customer = Customer('Joe Doe', 10.0)
-        assert customer.balance == 20.0, "Balance supposed to be 20.0"

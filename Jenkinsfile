@@ -23,4 +23,7 @@ pipeline {
             }
         }
     }
+    post {
+        junit allowEmptyResults: true, testResults: 'results.xml'
+    }
 }

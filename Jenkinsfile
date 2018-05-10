@@ -1,9 +1,15 @@
 pipeline {
-    agent { docker { image 'python:3.6.5-alpine' } }
+    agent { 
+        docker 
+        { 
+            image 'python:3.6.5-alpine' 
+        } 
+    }
     stages {
         stage('pre-check') {
             steps {
                 sh 'python --version'
+                sh 'docker-compose --version'
             }
         }
         stage('build') {
